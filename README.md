@@ -82,9 +82,3 @@ data to render.
 
 All pages share the same responsive Navbar/Footer and collapse to a mobile-first layout
 below the `lg` breakpoint (hamburger nav, stacked grids, full-width controls).
-
-## Not yet wired up (left for you)
-
-- Real map embed on the property detail page (placeholder block currently)
-- Property images (seed data has none — add via admin)
-- Deployment config (this ships as local dev setup only)
