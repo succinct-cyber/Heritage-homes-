@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif font-bold text-charcoal;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-container mx-auto px-5 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 uppercase text-xs tracking-widest2 font-semibold transition-colors;
+  }
+  .btn-primary {
+    @apply btn bg-green text-white px-6 py-3 rounded-md hover:bg-green-700;
+  }
+  .btn-outline {
+    @apply btn border border-charcoal/30 text-charcoal px-6 py-3 rounded-md hover:border-charcoal;
+  }
+  .btn-outline-light {
+    @apply btn border border-white/60 text-white px-6 py-3 rounded-md hover:border-white;
+  }
+  .btn-outline-sm {
+    @apply btn border border-charcoal/20 text-charcoal px-4 py-2 rounded-md text-[11px] hover:border-charcoal;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide;
+  }
+  .badge-green {
+    @apply badge bg-green text-white;
+  }
+  .badge-dark {
+    @apply badge bg-charcoal text-white;
+  }
+  .badge-chip {
+    @apply badge bg-charcoal/5 text-charcoal border border-charcoal/10;
+  }
+
+  .card {
+    @apply bg-white rounded-card overflow-hidden border border-charcoal/5;
+  }
+
+  .section-light {
+    @apply bg-cream;
+  }
+  .section-dark {
+    @apply bg-charcoal text-white;
+  }
+
+  .input-field {
+    @apply w-full rounded-md border border-charcoal/15 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-green/40 focus:border-green;
+  }
+}
