@@ -6,6 +6,7 @@ from pathlib import Path
 
 import dj_database_url
 from decouple import config, Csv
+from corsheaders.defaults import default_headers
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
