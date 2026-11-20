@@ -1,7 +1,3 @@
-databases:
-  - name: heritage-estates-db
-    plan: free
-
 services:
   # ---- Backend: Django REST API ----
   - type: web
@@ -19,9 +15,7 @@ services:
       - key: CORS_ALLOWED_ORIGINS
         value: https://heritage-estates.onrender.com
       - key: DATABASE_URL
-        fromDatabase:
-          name: heritage-estates-db
-          property: connectionString
+        sync: false
       - key: PYTHON_VERSION
         value: "3.12.3"
       - key: DJANGO_SUPERUSER_EMAIL
@@ -31,7 +25,7 @@ services:
 
   # ---- Frontend: React (Vite) static site ----
   - type: web
-    name: heritage-estates-frontend
+    name: heritage-estates
     runtime: static
     rootDir: frontend
     buildCommand: "npm install && npm run build"
